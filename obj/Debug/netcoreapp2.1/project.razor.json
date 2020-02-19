@@ -2922,6 +2922,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "d:\\Workshop\\2020\\WorkshopACCI\\WorkshopASPCore21\\WorkshopASPCore21\\Views\\Mahasiswa\\Details.cshtml",
+      "TargetPath": "Views\\Mahasiswa\\Details.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "d:\\Workshop\\2020\\WorkshopACCI\\WorkshopASPCore21\\WorkshopASPCore21\\Views\\_ViewStart.cshtml",
       "TargetPath": "Views\\_ViewStart.cshtml",
       "FileKind": "mvc"

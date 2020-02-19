@@ -52,7 +52,27 @@ namespace WorkshopASPCore21.DAL
 
         public Mahasiswa GetById(string id)
         {
-            throw new System.NotImplementedException();
+            Mahasiswa mhs = new Mahasiswa();
+            using(SqlConnection conn = new SqlConnection(GetConnStr())){
+                string strSql = @"select * from Mahasiswa 
+                                  where Nim=@Nim";
+                SqlCommand cmd = new SqlCommand(strSql,conn);
+                cmd.Parameters.AddWithValue("@Nim",id);
+                conn.Open();
+                SqlDataReader dr = cmd.ExecuteReader();
+                if(dr.HasRows){
+                    while(dr.Read()){
+                        mhs.Nim = dr["Nim"].ToString();
+                        mhs.Nama = dr["Nama"].ToString();
+                        mhs.IPK = Convert.ToDouble(dr["IPK"]);
+                        mhs.Email = dr["Email"].ToString();
+                    }
+                }
+                dr.Close();
+                cmd.Dispose();
+                conn.Close();
+            }
+            return mhs;
         }
 
         public void Insert(Mahasiswa mhs)

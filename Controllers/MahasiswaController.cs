@@ -16,5 +16,10 @@ namespace WorkshopASPCore21.Controllers
             var models = _mhs.GetAll();
             return View(models);
         }
+
+        public IActionResult Details(string id){
+            var model = _mhs.GetById(id);
+            return View(model);
+        }
     }
 }
