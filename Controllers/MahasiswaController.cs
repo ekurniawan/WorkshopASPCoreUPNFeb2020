@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
 using WorkshopASPCore21.DAL;
@@ -20,6 +21,21 @@ namespace WorkshopASPCore21.Controllers
         public IActionResult Details(string id){
             var model = _mhs.GetById(id);
             return View(model);
+        }
+
+        public IActionResult Create(){
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult Create(Mahasiswa mhs){
+            try{
+                _mhs.Insert(mhs);
+                return RedirectToAction("Index");
+            }catch(Exception ex){
+                ViewBag.Pesan = $"<span class='alert alert-danger'>{ex.Message}</span>";
+            }
+            return View();
         }
     }
 }

@@ -77,7 +77,28 @@ namespace WorkshopASPCore21.DAL
 
         public void Insert(Mahasiswa mhs)
         {
-            throw new System.NotImplementedException();
+            using(SqlConnection conn = new SqlConnection(GetConnStr())){
+                string strSql = @"insert into Mahasiswa(Nim,Nama,IPK,Email) 
+                                values(@Nim,@Nama,@IPK,@Email)";
+                SqlCommand cmd = new SqlCommand(strSql,conn);
+                cmd.Parameters.AddWithValue("@Nim",mhs.Nim);
+                cmd.Parameters.AddWithValue("@Nama",mhs.Nama);
+                cmd.Parameters.AddWithValue("@IPK",mhs.IPK);
+                cmd.Parameters.AddWithValue("@Email",mhs.Email);
+                try{
+                    conn.Open();
+                    cmd.ExecuteNonQuery();
+                }catch(SqlException sqlEx){
+                    throw new Exception(sqlEx.Message);
+                }
+                catch(Exception ex){
+                    throw new Exception(ex.Message);
+                }
+                finally{
+                    cmd.Dispose();
+                    conn.Close();
+                }
+            }
         }
 
         public void Update(Mahasiswa mhs)

@@ -2917,6 +2917,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "d:\\Workshop\\2020\\WorkshopACCI\\WorkshopASPCore21\\WorkshopASPCore21\\Views\\Mahasiswa\\Create.cshtml",
+      "TargetPath": "Views\\Mahasiswa\\Create.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "d:\\Workshop\\2020\\WorkshopACCI\\WorkshopASPCore21\\WorkshopASPCore21\\Views\\Shared\\_CookieConsentPartial.cshtml",
       "TargetPath": "Views\\Shared\\_CookieConsentPartial.cshtml",
       "FileKind": "mvc"

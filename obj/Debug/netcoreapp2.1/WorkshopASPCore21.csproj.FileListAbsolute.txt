@@ -36,3 +36,4 @@ D:\Workshop\2020\WorkshopACCI\WorkshopASPCore21\WorkshopASPCore21\obj\Debug\netc
 D:\Workshop\2020\WorkshopACCI\WorkshopASPCore21\WorkshopASPCore21\obj\Debug\netcoreapp2.1\Razor\Views\Home\GetData.cshtml.g.cs
 D:\Workshop\2020\WorkshopACCI\WorkshopASPCore21\WorkshopASPCore21\obj\Debug\netcoreapp2.1\Razor\Views\Mahasiswa\Index.cshtml.g.cs
 D:\Workshop\2020\WorkshopACCI\WorkshopASPCore21\WorkshopASPCore21\obj\Debug\netcoreapp2.1\Razor\Views\Mahasiswa\Details.cshtml.g.cs
+D:\Workshop\2020\WorkshopACCI\WorkshopASPCore21\WorkshopASPCore21\obj\Debug\netcoreapp2.1\Razor\Views\Mahasiswa\Create.cshtml.g.cs
