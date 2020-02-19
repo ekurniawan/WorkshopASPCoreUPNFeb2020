@@ -22,8 +22,9 @@ namespace WorkshopASPCore21.Controllers
             return View();
         }
 
-        public IActionResult Hello(){
-            return Content("Hello World !");
+        public IActionResult Hello(string firstname,string lastname){
+            
+            return View();
         }
 
         public IActionResult Contact()
