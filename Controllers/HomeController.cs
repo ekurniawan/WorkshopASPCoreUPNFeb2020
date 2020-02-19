@@ -27,6 +27,7 @@ namespace WorkshopASPCore21.Controllers
             return View();
         }
 
+        [HttpPost]
         public IActionResult GetData(string firstname,string lastname){
             ViewBag.FirstName = firstname;
             ViewBag.LastName = lastname;
