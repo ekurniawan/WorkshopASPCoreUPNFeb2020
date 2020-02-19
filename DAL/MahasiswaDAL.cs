@@ -1,14 +1,20 @@
 using System.Collections.Generic;
 using System.Data.SqlClient;
+using Microsoft.Extensions.Configuration;
 using WorkshopASPCore21.Models;
 
 namespace WorkshopASPCore21.DAL
 {
     public class MahasiswaDAL : IMahasiswa
     {
-        public MahasiswaDAL()
+        private IConfiguration _config;
+        public MahasiswaDAL(IConfiguration config)
         {
-            
+            _config = config;
+        }
+
+        private string GetConnStr(){
+            return _config.GetConnectionString("DefaultConnection");
         }
 
         public void Delete(string id)
