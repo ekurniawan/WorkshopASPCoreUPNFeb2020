@@ -24,7 +24,23 @@ namespace WorkshopASPCore21.DAL
 
         public IEnumerable<Mahasiswa> GetAll()
         {
-            throw new System.NotImplementedException();
+            List<Mahasiswa> lstMhs = new List<Mahasiswa>();
+            using(SqlConnection conn = new SqlConnection(GetConnStr())){
+                string strSql = @"select * from Mahasiswa 
+                                  order by Nama asc";
+                SqlCommand cmd = new SqlCommand(strSql,conn);
+                conn.Open();
+                SqlDataReader dr = cmd.ExecuteReader();
+                if(dr.HasRows){
+                    while(dr.Read()){
+                        lstMhs.Add(new Mahasiswa{
+                            Nim = dr["Nim"].ToString(),
+                            Nama = dr["Nama"].ToString(),
+                            IPK = 
+                        });
+                    }
+                }
+            }
         }
 
         public Mahasiswa GetById(string id)

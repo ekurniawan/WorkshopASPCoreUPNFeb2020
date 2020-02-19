@@ -9,6 +9,7 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using WorkshopASPCore21.DAL;
 
 namespace WorkshopASPCore21
 {
@@ -33,6 +34,9 @@ namespace WorkshopASPCore21
 
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+
+            //inject class MahasiswaDAL
+            services.AddTransient<IMahasiswa,MahasiswaDAL>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
