@@ -23,7 +23,14 @@ namespace WorkshopASPCore21.Controllers
         }
 
         public IActionResult Hello(string firstname,string lastname){
-            
+            ViewData["FirstName"] = firstname;
+            ViewBag.LastName = lastname;
+            return View();
+        }
+
+        public IActionResult GetData(string firstname,string lastname){
+            ViewBag.FirstName = firstname;
+            ViewBag.LastName = lastname;
             return View();
         }
 

@@ -2922,6 +2922,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "d:\\Workshop\\2020\\WorkshopACCI\\WorkshopASPCore21\\WorkshopASPCore21\\Views\\Home\\GetData.cshtml",
+      "TargetPath": "Views\\Home\\GetData.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "d:\\Workshop\\2020\\WorkshopACCI\\WorkshopASPCore21\\WorkshopASPCore21\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
       "TargetPath": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
       "FileKind": "mvc"
