@@ -76,7 +76,7 @@ using WorkshopASPCore21.Models;
             WriteLiteral("</p>\r\n\r\n<div class=\"row\">\r\n    <div class=\"col-md-6\">\r\n        ");
             EndContext();
             BeginContext(130, 601, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "c68ef03cba494c3bab34e6d4c52458f1", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "c7010ee421de41129c71aab3769b0cc4", async() => {
                 BeginContext(171, 553, true);
                 WriteLiteral(@"
             <div class=""form-group"">
