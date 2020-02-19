@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using System.Data.SqlClient;
 using Microsoft.Extensions.Configuration;
 using WorkshopASPCore21.Models;
+using System;
 
 namespace WorkshopASPCore21.DAL
 {
@@ -36,10 +37,16 @@ namespace WorkshopASPCore21.DAL
                         lstMhs.Add(new Mahasiswa{
                             Nim = dr["Nim"].ToString(),
                             Nama = dr["Nama"].ToString(),
-                            IPK = 
+                            IPK = Convert.ToDouble(dr["IPK"]),
+                            Email = dr["Email"].ToString()
                         });
                     }
                 }
+                dr.Close();
+                cmd.Dispose();
+                conn.Close();
+
+                return lstMhs;
             }
         }
 
