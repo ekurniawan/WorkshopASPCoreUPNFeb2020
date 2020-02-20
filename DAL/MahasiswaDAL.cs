@@ -20,7 +20,23 @@ namespace WorkshopASPCore21.DAL
 
         public void Delete(string id)
         {
-            throw new System.NotImplementedException();
+            using(SqlConnection conn = new SqlConnection(GetConnStr())){
+                string strSql = @"delete from Mahasiswa where 
+                                  Nim=@Nim";
+                SqlCommand cmd = new SqlCommand(strSql,conn);
+                cmd.Parameters.AddWithValue("@Nim",id);
+                try{
+                    conn.Open();
+                    cmd.ExecuteNonQuery();
+                }
+                catch(SqlException sqlEx){
+                    throw new Exception($"Error: {sqlEx}");
+                }
+                finally{
+                    cmd.Dispose();
+                    conn.Close();
+                }
+            }
         }
 
         public IEnumerable<Mahasiswa> GetAll()
