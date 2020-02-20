@@ -53,5 +53,23 @@ namespace WorkshopASPCore21.Controllers
                 return View("Details",mhs);
             }
         }
+
+        public IActionResult Delete(string id){
+            var model = _mhs.GetById(id);
+            return View(model);
+        }
+
+        [ActionName("Delete")]
+        [HttpPost]
+        public IActionResult DeletePost(string id){
+            try{
+                _mhs.Delete(id);
+                return RedirectToAction("Index");
+            }
+            catch(Exception ex){
+                ViewBag.Error = ex.Message;
+                return View();
+            }
+        }
     }
 }
