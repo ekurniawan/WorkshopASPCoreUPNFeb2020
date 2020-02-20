@@ -126,6 +126,7 @@ namespace WorkshopASPCore21.DAL
                 cmd.Parameters.AddWithValue("@Nama",mhs.Nama);
                 cmd.Parameters.AddWithValue("@IPK",mhs.IPK);
                 cmd.Parameters.AddWithValue("@Email",mhs.Email);
+                cmd.Parameters.AddWithValue("@Nim",mhs.Nim);
                 try{
                     conn.Open();
                     cmd.ExecuteNonQuery();

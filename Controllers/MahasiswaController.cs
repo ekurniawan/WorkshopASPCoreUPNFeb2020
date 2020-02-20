@@ -37,5 +37,21 @@ namespace WorkshopASPCore21.Controllers
             }
             return View();
         }
+
+        public IActionResult Update(string id){
+            var model = _mhs.GetById(id);
+            return View("Details",model);
+        }
+
+        [HttpPost]
+        public IActionResult Update(Mahasiswa mhs){
+            try{
+                _mhs.Update(mhs);
+                return RedirectToAction("Index");
+            }catch(Exception ex){
+                ViewBag.Error = ex.Message;
+                return View("Details",mhs);
+            }
+        }
     }
 }

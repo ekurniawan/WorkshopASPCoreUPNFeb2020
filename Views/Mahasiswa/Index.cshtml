@@ -11,6 +11,7 @@
                 <th>Nama</th>
                 <th>IPK</th>
                 <th>Email</th>
+                <th></th>
             </tr>
             @foreach (var item in Model)
             {
@@ -19,6 +20,7 @@
                     <td>@item.Nama</td>
                     <td>@item.IPK</td>
                     <td>@item.Email</td>
+                    <td><a asp-action="Update" asp-route-id="@item.Nim" class="btn btn-success btn-xs">update</a></td>
                 </tr>
             }
         </table>

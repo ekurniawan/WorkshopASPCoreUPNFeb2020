@@ -3,6 +3,7 @@
 
 <div class="row">
     <div class="col-md-6">
+        @ViewBag.Error
         <h2>Detail Mahasiswa</h2>
 
         <form method="POST" asp-action="Update">
@@ -26,7 +27,7 @@
                 <input type="text" class="form-control" 
                 name="Email" value="@Model.Email" />
             </div>
-            <button class="btn btn-default">Submit</button>
+            <button class="btn btn-success" name="action">Update</button>
         </form>
     </div>
 </div>

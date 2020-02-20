@@ -65,7 +65,7 @@ using WorkshopASPCore21.Models;
             WriteLiteral("\r\n        ");
             EndContext();
             BeginContext(124, 995, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "104c89b4e76a4ebf83e5bdd4470011b5", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "d8e061844ab14d40979ef7934f47e672", async() => {
                 BeginContext(150, 962, true);
                 WriteLiteral(@"
             <div class=""form-group"">
